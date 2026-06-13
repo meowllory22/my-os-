@@ -8,17 +8,20 @@
   }
 
   body {
-    background-repeat: repeat-x;
     background-image: url('maxresdefault.jpg');
     background-size: 300px 100px;
+    font-family: cursive;
   }
 
 
 </style>
 
-  <body style="background-color:rgb(255, 191, 210); font-family: cursive;">
+
+
+
+    <div style="background-color: rgb(255, 191, 210);border: solid; border-color: hotpink; border-radius:22px; height: fit-content; padding:10px; position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%);">
     
-    <h1  style="color: rgb(255, 15, 95); margin-top: 125px; align-items: center; justify-content: center; display: flex;">welcome to my sick webasite B)</h1>
+    <h1 style="color: rgb(255, 15, 95); margin-top: 125px; align-items: center; justify-content: center; display: flex;">welcome to my sick webasite B)</h1>
   
 
 
@@ -32,7 +35,47 @@
 
 
     <p>i like to code and draw and make music and listen to music and i really like science and biology and i love my friends and i really like bunnies they are cute</p>
-  <img style="width: 300px; float: right;"src="backrooms-skeleton.gif"/>
+  <img style="width: 300px;"src="backrooms-skeleton.gif"/>
+
+
+  
+
+
+
+  
+  </div>
+
+  <div style="width:100%;display: flex; justify-content: space-around; position:absolute; bottom: 0;background-color: rgba(255, 255, 255, 0.651); color: rgb(255, 15, 95); backdrop-filter: blur(10px);">
+
+  <p style="font-weight: bolder; border: dotted; border-color:blue; border-radius: 10px;">
+    cool-os
+  </p>
+
+
+  <p id="timeelement"
+
+  style="font-weight: bolder; border: dotted; border-color:blue; border-radius: 10px;">
+  </p>
+
+  <script>
+
+  function updateTime() {
+    var Time = new Date().toLocaleString();
+
+    var timeText = document.querySelector("#timeelement")
+
+    timeText.innerHTML = Time;
+  }
+
+  setInterval(updateTime, 1000);
+  </script>
+
+
+
+
+
+</div>
+
 
   </body>
 
