@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <script type="module" src="./script.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
 <style>
 
   .links {
@@ -16,10 +20,14 @@
 
 </style>
 
+  <body>
 
 
+    <div class="welcome"id="welcome">
+    
+    <img class="welcomeheader"d="welcomeheader" src="cat-ai-pufferfish-cat.gif"/>
+    <p class="welcomeClose" id="welcomeclose">X</p>
 
-    <div style="background-color: rgb(255, 191, 210);border: solid; border-color: hotpink; border-radius:22px; height: fit-content; padding:10px; position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%);">
     
     <h1 style="color: rgb(255, 15, 95); margin-top: 125px; align-items: center; justify-content: center; display: flex;">welcome to my sick webasite B)</h1>
   
@@ -47,7 +55,7 @@
 
   <div style="width:100%;display: flex; justify-content: space-around; position:absolute; bottom: 0;background-color: rgba(255, 255, 255, 0.651); color: rgb(255, 15, 95); backdrop-filter: blur(10px);">
 
-  <p style="font-weight: bolder; border: dotted; border-color:blue; border-radius: 10px;">
+  <p id="welcomeopen" style="cursor: pointer;font-weight: bolder; border: dotted; border-color:blue; border-radius: 10px;">
     cool-os
   </p>
 
@@ -57,7 +65,6 @@
   style="font-weight: bolder; border: dotted; border-color:blue; border-radius: 10px;">
   </p>
 
-  <script>src="script.js"</script>
 
 
 
@@ -65,6 +72,7 @@
 
 </div>
 
+    <script src="script.js"></script>
 
   </body>
 
