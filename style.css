@@ -6,6 +6,7 @@
     height: fit-content;
     padding: 10px;
     position: absolute;
+    left:700px;
 }
 
 .welcomeheader {
@@ -14,7 +15,17 @@
 }
 
 .welcomeClose {
+    float: right;
     cursor: pointer;
     color:hotpink;
     font-weight:bolder;
+}
+
+.selected {
+    text-decoration:dotted;
+    text-decoration-color: rgb(255, 255, 255);
+    background-color: blue;
+    border-style: dotted;
+    border-color: white;
+
 }
