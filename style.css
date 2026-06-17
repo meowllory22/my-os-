@@ -27,5 +27,14 @@
     background-color: blue;
     border-style: dotted;
     border-color: white;
-
+    display:block;
 }
+
+.hidden {
+    display: none;
+}
+
+.shown {
+    display: block;
+}
+

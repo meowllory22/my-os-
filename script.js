@@ -73,27 +73,96 @@ welcomeScreenOpen.addEventListener("click", function() {
   openWindow(welcomeScreen);
 });
 
+
+
+
+
+
+
+var crapScreen = document.querySelector("#crap")
+
+var retep = document.querySelector("#crapselected")
+
+var shortcutcrap = document.querySelector("#crapopen")
+
+var crapScreenClose = document.querySelector("#crapclose")
+
+shortcutcrap.addEventListener("click", function() {
+  openWindow(crapScreen);
+});
+
+crapScreenClose.addEventListener("click", function() {
+  closeWindow(crapScreen);
+});
+
+
 var selectedIcon = undefined
 
 function selectIcon(element) {
   element.classList.add("selected")
   selectedIcon = element
+  element.classList.add("shown")
 }
+
+shortcutcrap.addEventListener("mouseover", function() {
+  handleIconTap(shortcutcrap);
+});
+shortcutcrap.addEventListener("mouseout", function() {
+  deselectIcon(shortcutcrap);
+});
 
 function deselectIcon(element) {
   element.classList.remove("selected")
   selectedIcon = undefined
 }
 
+
 function handleIconTap(element) {
   if (element.classList.contains("selected")) {
-    deselectIcon(element) 
-    openWindow(crap)
+    deselectIcon(element);
   } else {
-    selectIcon(element) 
-
+    selectIcon(element);
   }
 }
 
 dragElement(document.getElementById("crap"));
+
+var bar = document.querySelector("#bar")
+
+var biggestIndex = 1;
+
+function addWindowTapHandling(element) {
+  element.addEventListener("mousedown", () =>
+  handleWindowTap(welcomeScreen)
+)
+}
+
+function addWindowTapHandling(element) {
+  element.addEventListener("mousedown", () =>
+  handleWindowTap(crapScreen)
+)
+}
+
+function handleWindowTap(element) {
+  biggestIndex++;
+  element.style.zIndex = biggestIndex++;
+}
+
+function openWindow(element) {
+  element.style.display = "block"
+  biggestIndex++;
+  element.style.zIndex = biggestIndex;
+}
+
+function initializeWindow(elementName) {
+  var screen = document.querySelector("#" +elementName)
+  addWindowTapHandling(screen)
+  makeCloseable(screen)
+  dragElement(screen)
+}
+
+
+
+
+
 

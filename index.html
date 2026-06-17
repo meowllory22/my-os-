@@ -24,19 +24,20 @@
 
     <div id="desktopApps" style="padding-top: 15px; padding-left: 15px;">
       
-      <div style="text-decoration:dotted; text-decoration-color: blue;  background-color: white; width: 50px;">
-        <img src="Peter_Griffin.png" style="border-style: dotted; border-color: blue; width:50px;">
+      <div id ="retep"style="text-decoration:dotted; text-decoration-color: blue;  background-color: white; width: 50px;">
+        <img src="Retep.png" style="width:50px; display: none;">
+        <img src="Peter_Griffin.png" id="crapopen" style="border-style: dotted; border-color: blue; width:50px;">
       <p>holy crap</p>
       </div>
-      <div class="selected">
-        <img src="Retep.png" style="width:50px;">
-      </div>
     </div>
+      
+
+      
 
 
     <div class="welcome"id="welcome">
     
-    <img class="welcomeheader"d="welcomeheader" src="cat-ai-pufferfish-cat.gif"/>
+    <img class="welcomeheader"id="header" src="cat-ai-pufferfish-cat.gif"/>
     <p class="welcomeClose" id="welcomeclose">X</p>
 
     
@@ -64,18 +65,24 @@
   
   </div>
 
-  <div class="welcome"id="crap">
+  <div class="welcome"id="crap" style="display: none;">
     
-    <img class="welcomeheader"d="welcomeheader" src="cat-ai-pufferfish-cat.gif"/>
-    <p class="welcomeClose" id="welcomeclose">X</p>
+    <img class="welcomeheader"id="header" src="cat-ai-pufferfish-cat.gif"/>
+    <p class="welcomeClose" id="crapclose">X</p>
 
+    <div>
     <p style="color: green; font-weight: bolder;">holy crap..donald trump??</p>
     <h2 style="color: blue; font-weight: bolder;">hello peter..welcome to</h2>
     <img src="fortnite.jpg" style="width:500px; border-style:dotted; border-color:blue;">
+    </div>
     
+
+    
+
+    </div>
   </div>
 
-  <div style="width:100%;display: flex; justify-content: space-around; position:absolute; bottom: 0;background-color: rgba(255, 255, 255, 0.651); color: rgb(255, 15, 95); backdrop-filter: blur(10px);">
+  <div id="bar"style="width:100%;display: flex; justify-content: space-around; position:absolute; bottom: 0;background-color: rgba(255, 255, 255, 0.651); color: rgb(255, 15, 95); backdrop-filter: blur(10px);">
 
   <p id="welcomeopen" style="cursor: pointer;font-weight: bolder; border: dotted; border-color:blue; border-radius: 10px;">
     cool-os
