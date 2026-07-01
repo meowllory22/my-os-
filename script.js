@@ -122,6 +122,23 @@ recipesScreenClose.addEventListener("click", function() {
 
 
 
+var musicScreen = document.querySelector("#music")
+
+var shortcutmusic = document.querySelector("#musicopen")
+
+var musicScreenClose = document.querySelector("#musicclose")
+
+shortcutmusic.addEventListener("click", function() {
+  openWindow(musicScreen);
+});
+
+musicScreenClose.addEventListener("click", function() {
+  closeWindow(musicScreen);
+});
+
+
+
+
 
 
 
@@ -148,6 +165,13 @@ shortcutrecipes.addEventListener("mouseout", function() {
   deselectIcon(shortcutrecipes);
 });
 
+shortcutmusic.addEventListener("mouseover", function() {
+  handleIconTap(shortcutmusic);
+});
+shortcutmusic.addEventListener("mouseout", function() {
+  deselectIcon(shortcutmusic);
+});
+
 
 function deselectIcon(element) {
   element.classList.remove("selected")
@@ -166,6 +190,8 @@ function handleIconTap(element) {
 dragElement(document.getElementById("crap"));
 
 dragElement(document.getElementById("recipes"));
+
+dragElement(document.getElementById("music"));
 
 var bar = document.querySelector("#bar")
 
@@ -186,6 +212,12 @@ function addWindowTapHandling(element) {
 function addWindowTapHandling(element) {
   element.addEventListener("mousedown", () =>
   handleWindowTap(recipeScreen)
+)
+}
+
+function addWindowTapHandling(element) {
+  element.addEventListener("mousedown", () =>
+  handleWindowTap(musicScreen)
 )
 }
 
@@ -211,10 +243,36 @@ var wave = document.querySelector("#catwave")
 var hi = document.querySelector("#hi")
 const sound = new Audio("hi.mp3");
 
+const popipo = new Audio("popipo.mp3");
+const polkka = new Audio("polkka.mp3");
+const nya = new Audio("nya.mp3");
+const baka = new Audio("baka.mp3");
+
+
 sound.volume = 1.0
+popipo.volume = 0.5
+polkka.volume = 0.5
+nya.volume = 0.5
+baka.volume = 0.5
 
 function playsound() {
   sound.play()
+}
+function playpopipo() {
+  popipo.play()
+}
+function playpolkka() {
+  polkka.play()
+}
+function playnya() {
+  nya.play()
+}
+function playbaka() {
+  baka.play()
+}
+
+function togglePlayback() {
+
 }
 
 catwave.addEventListener("click", function() {

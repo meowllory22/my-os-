@@ -38,3 +38,14 @@
     display: block;
 }
 
+.musicbutton {
+    height: 50px;
+    float: right;
+    margin-right: 10px;
+    background-color: rgb(255, 231, 238);
+    color: hotpink;
+    border-color: hotpink;
+    border-style: solid;
+    border-radius: 10px;
+    cursor: pointer;
+}
