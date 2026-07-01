@@ -87,6 +87,7 @@ var shortcutcrap = document.querySelector("#crapopen")
 
 var crapScreenClose = document.querySelector("#crapclose")
 
+
 shortcutcrap.addEventListener("click", function() {
   openWindow(crapScreen);
 });
@@ -94,6 +95,35 @@ shortcutcrap.addEventListener("click", function() {
 crapScreenClose.addEventListener("click", function() {
   closeWindow(crapScreen);
 });
+
+
+
+
+
+
+
+
+
+var recipesScreen = document.querySelector("#recipes")
+
+var shortcutrecipes = document.querySelector("#recipesopen")
+
+var recipesScreenClose = document.querySelector("#recipesclose")
+
+
+shortcutrecipes.addEventListener("click", function() {
+  openWindow(recipesScreen);
+});
+
+recipesScreenClose.addEventListener("click", function() {
+  closeWindow(recipesScreen);
+});
+
+
+
+
+
+
 
 
 var selectedIcon = undefined
@@ -111,6 +141,14 @@ shortcutcrap.addEventListener("mouseout", function() {
   deselectIcon(shortcutcrap);
 });
 
+shortcutrecipes.addEventListener("mouseover", function() {
+  handleIconTap(shortcutrecipes);
+});
+shortcutrecipes.addEventListener("mouseout", function() {
+  deselectIcon(shortcutrecipes);
+});
+
+
 function deselectIcon(element) {
   element.classList.remove("selected")
   selectedIcon = undefined
@@ -127,6 +165,8 @@ function handleIconTap(element) {
 
 dragElement(document.getElementById("crap"));
 
+dragElement(document.getElementById("recipes"));
+
 var bar = document.querySelector("#bar")
 
 var biggestIndex = 1;
@@ -140,6 +180,12 @@ function addWindowTapHandling(element) {
 function addWindowTapHandling(element) {
   element.addEventListener("mousedown", () =>
   handleWindowTap(crapScreen)
+)
+}
+
+function addWindowTapHandling(element) {
+  element.addEventListener("mousedown", () =>
+  handleWindowTap(recipeScreen)
 )
 }
 
@@ -160,6 +206,21 @@ function initializeWindow(elementName) {
   makeCloseable(screen)
   dragElement(screen)
 }
+
+var wave = document.querySelector("#catwave")
+var hi = document.querySelector("#hi")
+const sound = new Audio("hi.mp3");
+
+sound.volume = 1.0
+
+function playsound() {
+  sound.play()
+}
+
+catwave.addEventListener("click", function() {
+  openWindow(hi);
+  sound.play()
+});
 
 
 
